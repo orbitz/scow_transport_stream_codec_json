@@ -1,10 +1,13 @@
+PACKAGES=core,async,scow,scow_transport_stream,scow_transport_stream_codec_json
+
 CAMLP4=
-OCAMLC_OPTS=-w '@f@p@u@s@40'
+OCAMLC_OPTS=-w '@f@p@u@s@40' -package $(PACKAGES)
 OCAMLOPT_OPTS=$(OCAMLC_OPTS)
 
-NON_LIB_MODULES=
+NON_LIB_MODULES=append_entries.ml
 
-EXTERNAL_DEPS=
+EXTERNAL_DEPS=../lib/scow_transport_stream_codec_json/scow_transport_stream_codec_json.cma \
+	../lib/scow_transport_stream_codec_json/scow_transport_stream_codec_json.cmxa
 
 native_bin=$(NON_LIB_MODULES:%.ml=%.native)
 

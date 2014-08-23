@@ -1,0 +1,6 @@
+name="scow_transport_stream_codec_json"
+version="1.0.0"
+description="JSON codec for scow_transport_stream"
+requires="core,scow,scow_transport_stream,json-wheel"
+archive(byte)="scow_transport_stream_codec_json.cma"
+archive(native)="scow_transport_stream_codec_json.cmxa"

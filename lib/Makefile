@@ -1,4 +1,4 @@
-SUBDIRS = example
+SUBDIRS = scow_transport_stream_codec_json
 
 all_apps = $(SUBDIRS)
 
