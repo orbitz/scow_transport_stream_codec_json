@@ -1,2 +1,2 @@
 * About
-Template for my usual ocaml projects
+A JSON codec for scow_stream_transport
