@@ -10,9 +10,19 @@ NON_LIB_MODULES=
 BYTE_TARGETS=scow_transport_stream_codec_json.cma
 NATIVE_TARGETS=scow_transport_stream_codec_json.cmxa
 
-.PHONY: all test
+.PHONY: all test install
 
 all: native-code byte-code
+
+install: all
+	ocamlfind install scow_transport_stream_codec_json \
+	META \
+	$(BYTE_TARGETS) \
+	$(NATIVE_TARGETS) \
+	scow_transport_stream_codec_json.a \
+	*.cmx \
+	*.cmi \
+	*.mli
 
 test:
 
